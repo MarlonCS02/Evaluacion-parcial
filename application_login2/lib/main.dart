@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/providers/auth_provider.dart';
+import 'pages/providers/status_provider.dart';
 import 'pages/auth/login.dart';
 import 'pages/home/home.dart';
 
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => StatusProvider()),
       ],
       child: MaterialApp(
-        title: 'Login App',
+        title: 'Estados App',
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
